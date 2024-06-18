@@ -81,3 +81,7 @@ git push -u origin main # 推送本地仓库到 GitHub。推送到GitHub的 main
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
+- 其它
+如果要新添一个文件类型到 .gitignore 中的话，不是简单的添加，之前已经 push 到 github 上的文件不能删除，需查一下。
+
+
