@@ -20,7 +20,16 @@ crontab -e
 如果是第一次运行这条命令，系统可能会让你选择一个文本编辑器。选择你熟悉的编辑器。
 
 2. 添加一个新任务
-在 crontab 文件中添加一行，以指定何时和如何运行你的脚本。cron 格式如下：
+
+- 安装 curl
+```sh
+curl --version  # 查看是否已装 curl 
+
+# 如果没有，使用 apt 包管理器来安装 curl
+sudo apt update
+sudo apt install curl  # 
+```
+- 在 crontab 文件中添加一行，以指定何时和如何运行你的脚本。cron 格式如下：
 ```plaintext
 */9 * * * * curl -s https://www.baidu.com > /dev/null 2>&1
 @reboot curl -s https://www.baidu.com > /dev/null 2>&1
@@ -54,7 +63,7 @@ crontab -l
 ```
 - 查看是否成功在后台运行<br>
 ```sh
-sudo grep CRON/var/log/syslog
+sudo grep CRON /var/log/syslog
 ```
 
 <div style="text-align: center;">
