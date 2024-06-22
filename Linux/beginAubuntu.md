@@ -209,6 +209,7 @@ htop
 ```sh
 nvidia-smi  # CUDA version
 
+sudo apt install python3-pip
 pip install gpustat
 gpustat -cupP -i  # 事实使用状态和基本信息
 
